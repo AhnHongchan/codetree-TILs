@@ -1,3 +1,3 @@
-a, b = 14, 5
+a, b = input().split()
 a, b = b, a
 print(a, b)
