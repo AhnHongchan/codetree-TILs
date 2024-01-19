@@ -1,0 +1,5 @@
+a = input().split('-')
+x = int(a[2])
+y = int(a[1])
+z = str(a[0])
+print(f'{z}-{x}-{y}')
