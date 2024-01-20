@@ -1,3 +1,2 @@
-cal = input().split()
-a = int(cal[0])
-print(f'{a//10}...{a%10}')
+a, b = map(int,input().split())
+print(f'{a//b}...{a%b}')
