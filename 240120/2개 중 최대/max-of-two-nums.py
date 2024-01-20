@@ -1,5 +1,3 @@
 a, b = map(int, input().split())
-if a > b:
-    print(a)
-if a < b:
-    print(b)
+maxnum = a if a > b else b
+print(maxnum)
