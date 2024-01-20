@@ -1,0 +1,5 @@
+cal = input().split()
+a = int(cal[0])
+b = int(cal[1])
+print(f'{a} * {b} = {a * b}')
+print(f'{a} / {b} = {a // b}')
