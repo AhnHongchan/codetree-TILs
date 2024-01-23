@@ -1,5 +1,6 @@
 a, b= map(int, input().split())
 if a >= 0:
-    print(str(a) * b)
+    for i in range(b):
+        print(str(a), end="")
 else:
     print(0)
