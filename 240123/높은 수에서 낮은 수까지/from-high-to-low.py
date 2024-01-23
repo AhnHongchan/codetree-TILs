@@ -5,4 +5,4 @@ if a < b:
         print(b-i, end = " ")
 else:
     for j in range(a-b+1):
-        print(a-i, end = " ")
+        print(a-j, end = " ")
