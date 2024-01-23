@@ -10,7 +10,7 @@ if symp0 == 'Y' and int(temp0) >= 37:
         else:
             print('N')
 else:
-    if (symp1 == 'Y' and int(temp1)) and (symp2 == 'Y' and int(temp2)):
+    if (symp1 == 'Y' and int(temp1) >= 37) and (symp2 == 'Y' and int(temp2) >= 37):
         print('E')
     else:
         print('N')
