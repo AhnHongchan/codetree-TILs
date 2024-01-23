@@ -2,9 +2,8 @@ a, b = input().split()
 b = int(b)
 i = 1
 if a  == 'A':
-    while i <= b:
+    for i in range(1, b+1):
         print(i, end=" ")
-        i += 1
-elif a == 'D':
-    while i <= b:
-        print(b+1-i, end = " ")
+else:
+    for i in range(b, 0, -1):
+        print(i, end=" ")
