@@ -1,2 +1,3 @@
-for i in range(8):
-    print(8 - i, end=" ")
+n = int(input())
+for i in range(n):
+    print(n - i, end=" ")
