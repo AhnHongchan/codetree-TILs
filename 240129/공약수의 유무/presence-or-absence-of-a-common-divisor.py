@@ -1,19 +1,12 @@
 a, b = map(int, input().split())
 satisfied = False
 
-if a > b:
-    for i in range(2, a):
+for i in range(2, b):
+    if 1920 % i == 0 and 2880 % i == 0:
         if (a % i == 0) and (b % i == 0):
             satisfied = True
         else:
-            pass
-
-if a < b:
-    for i in range(2, b):
-        if (a % i == 0) and (b % i == 0):
-            satisfied = True
-        else:
-            pass
+            pass 
 
 if satisfied == True:
     print(1)
