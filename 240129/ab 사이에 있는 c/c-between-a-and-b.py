@@ -1,7 +1,7 @@
 satisfied = False
 a, b, c = map(int, input().split())
 for i in range(a, b+1):
-    if i % 3 == 0:
+    if i % c == 0:
         satisfied = True
     else:
         pass
