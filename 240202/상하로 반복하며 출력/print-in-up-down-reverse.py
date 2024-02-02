@@ -4,5 +4,5 @@ for i in range(num):
         if j % 2 == 1:
             print(i+1, end="")
         else:
-            print(4-i, end="")
+            print(num-i, end="")
     print()
