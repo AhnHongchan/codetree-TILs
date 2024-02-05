@@ -7,6 +7,6 @@ for i in range(num):
         print(chr(65+cnt), end=' ')
         cnt += 1
 
-    if cnt > 25:
-        cnt == 0
+        if cnt > 25:
+            cnt = 0
     print()
