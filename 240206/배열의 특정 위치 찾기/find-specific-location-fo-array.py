@@ -6,7 +6,7 @@ sum3 = 0
 for i in range(len(numbers)):
     if (i+1) % 2 == 0:
         sum2 += numbers[i]
-    elif (i+1) % 3 == 0:
+    elif (i+1) % 3 == 0 and i != 0:
         sum3 += numbers[i]
         cnt += 1
 
