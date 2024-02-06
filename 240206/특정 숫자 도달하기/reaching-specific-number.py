@@ -12,4 +12,4 @@ for i in range(10):
 
 avg = sum / cnt
 
-print(sum, avg)
+print(sum, f'{avg:.1f}')
