@@ -9,5 +9,7 @@ for i in range(start, end+1):
     
     if cnt == 3:
         case += 1
+        if cnt > 3:
+            case -= 1
     
 print(case)
