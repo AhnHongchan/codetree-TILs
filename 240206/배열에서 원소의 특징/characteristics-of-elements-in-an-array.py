@@ -1,5 +1,10 @@
 numbers = list(map(int, input().split()))
-for i in range(len(numbers)):
-    if (i+1) % 3 == 0:
-        print(numbers[i-1])
+
+num3 = 0
+
+for num in numbers:
+    if num % 3 == 0:
         break
+    num3 = num
+
+print(num3)
