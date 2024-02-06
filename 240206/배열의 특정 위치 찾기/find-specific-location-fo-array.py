@@ -2,10 +2,10 @@ numbers = list(map(int, input().split()))
 sum2 = 0
 cnt = 0
 sum3 = 0
-for i in range(len(numbers)):
-    if numbers[i] % 2 == 0:
+for i in range(0, len(numbers)):
+    if (i+1) % 2 == 0:
         sum2 += numbers[i]
-    elif numbers[i] % 3 == 0:
+    elif (i+1) % 3 == 0:
         sum3 += numbers[i]
         cnt += 1
 
