@@ -1,14 +1,14 @@
 num = int(input())
 numbers = list(map(int, input().split()))
 
-min_val = 0
+min_val = numbers[0]
 cnt = 1
-for number in numbers:
-    if min_val > number:
-        min_val = number
+for i in range(1, num):
+    if min_val > numbers[i]:
+        min_val = numbers[i]
         cnt = 1
 
-    elif min_val == number:
+    elif min_val == numbers[i]:
         cnt += 1
 
 print(min_val, cnt)
