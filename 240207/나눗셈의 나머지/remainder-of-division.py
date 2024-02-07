@@ -1,6 +1,6 @@
 a, b = map(int, input().split())
 c = [0] * b
-while a > 0:
+while a >= 2:
 
     for i in range(b):
         if i == a % b:
