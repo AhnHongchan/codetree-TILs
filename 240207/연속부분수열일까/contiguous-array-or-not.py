@@ -5,5 +5,6 @@ n2_set = list(map(int, input().split()))
 for i in range(n1-n2+1):
     if n1_set[i:i+n2] == n2_set[:]:
         print('Yes')
+        break
 else:
     print('No')
