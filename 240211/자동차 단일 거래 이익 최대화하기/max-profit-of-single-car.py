@@ -11,3 +11,5 @@ for i in range(n):
     
     if min_price > price[i]:
         min_price = price[i]
+
+print(max_profit)
