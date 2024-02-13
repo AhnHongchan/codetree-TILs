@@ -8,7 +8,7 @@ for j in range(m):
             lst[i][j] = cnt
             cnt += 1
         else:
-            lst[3-i][j] = cnt
+            lst[n-1-i][j] = cnt
             cnt += 1
 
 for x in lst:
