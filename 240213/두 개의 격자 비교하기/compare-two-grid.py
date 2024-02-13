@@ -4,7 +4,7 @@ lst2 = [list(map(int, input().split())) for _ in range(n)]
 lst3 = [[0 for _ in range(m)] for _ in range(n)]
 
 for x in range(n):
-    for y in range(n):
+    for y in range(m):
         if lst1[x][y] == lst2[x][y]:
             lst3[x][y] = 0
         else:
