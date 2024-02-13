@@ -2,16 +2,18 @@ lst1 = [list(map(int, input().split())) for _ in range(3)]
 space = input()
 lst2 = [list(map(int, input().split())) for _ in range(3)]
 
-lst4 = []
+lst3 = [
+    [0 for _ in range(3)]
+    for _ in range(3)
+]
 
-for x in range(3):
-    lst3 = []
-    for y in range(3):
-        mul = lst1[x][y] * lst2[x][y]
-        lst3.append(mul)
-    lst4.append(lst3)
-
-for x in lst4:
-    for y in x:
-        print(y, end=' ')
-    print()
+# 두 배열의 곱을 새로운 배열에 담습니다.
+for i in range(3):
+	for j in range(3):
+		lst3[i][j] = lst1[i][j] * lst2[i][j]
+	
+# 새로운 배열을 출력합니다.
+for row in lst3:
+	for elem in row:
+		print(elem, end=" ")
+	print()
