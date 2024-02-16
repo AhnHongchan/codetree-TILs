@@ -6,4 +6,4 @@ if len(txt) > n:
         print(x, end='')
 else:
     for y in txt[::-1]:
-        print(y)
+        print(y, end='')
