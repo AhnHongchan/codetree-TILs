@@ -1,7 +1,10 @@
-txt1 = list(map(str, input().split()))
-txt2 = list(map(str, input().split()))
+string = input()
+string2 = input()
 
-txt_1 = ''.join(txt1)
-txt_2 = ''.join(txt2)
+for elem in string:
+	if elem != " ":
+		print(elem, end="")
 
-print(txt_1, txt_2, sep='')
+for elem in string2:
+	if elem != " ":
+		print(elem, end="")
