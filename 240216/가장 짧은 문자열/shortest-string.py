@@ -5,6 +5,8 @@ for i in range(3):
     length = len(txt)
     lst.append(length)
 
-lst.sort()
+for i in range(2):
+    if lst[i] > lst[i+1]:
+        lst[i], lst[i+1] = lst[i+1], lst[i]
 
-print(f'{lst[2] - lst[0]}')
+print(lst[2] - lst[0])
