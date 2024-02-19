@@ -1,0 +1,5 @@
+str = input()
+lst = list(str)
+lst.pop(1)
+lst.pop(-2)
+print(''.join(lst), sep='')
