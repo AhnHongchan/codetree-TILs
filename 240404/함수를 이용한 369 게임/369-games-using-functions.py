@@ -9,7 +9,7 @@ a, b = map(int, input().split())
 
 cnt = 0
 for i in range(a, b+1):
-    if TSN(i) or (i % 3 == 0):
+    if (i % 3 == 0) or TSN(i):
         cnt += 1
 
 print(cnt)
