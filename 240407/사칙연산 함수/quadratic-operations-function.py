@@ -3,16 +3,17 @@ def calculator(a, b, c):
         return False
     else:
         if b == '+':
-            return a + b
+            return a + c
         elif b == '-':
-            return a - b
+            return a - c
         elif b == '*':
-            return a * b
+            return a * c
         elif b == '/':
-            return a / b
+            return a / c
 
-a = list(input())
-a[0] = int(a[0])
-a[2] = int(a[2])
-result = calculator(a[0], a[1], a[2])
-print(result)
+a, b, c = input().split()
+result = calculator(int(a), b, int(c))
+if not result:
+    print(False)
+else:
+    print(a, b, c, '=', f'{result}')
