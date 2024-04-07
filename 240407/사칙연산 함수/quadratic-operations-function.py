@@ -9,7 +9,7 @@ def calculator(a, b, c):
         elif b == '*':
             return a * c
         elif b == '/':
-            return a / c
+            return a // c
 
 a, b, c = input().split()
 result = calculator(int(a), b, int(c))
