@@ -1,5 +1,5 @@
 def calculator(a, b, c):
-    if b not in '+_/*':
+    if b not in '+-/*':
         return False
     else:
         if b == '+':
