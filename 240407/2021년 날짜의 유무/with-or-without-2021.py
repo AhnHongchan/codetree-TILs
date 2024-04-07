@@ -10,7 +10,7 @@ if M in long:
 elif M in short:
     if D <= 30:
         result = 'Yes'
-else:
+elif M == 2:
     if D <= 28:
         result = 'Yes'
 
