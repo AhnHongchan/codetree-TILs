@@ -10,7 +10,7 @@ def reverse_scale(n):
     if n == 0:
         return
     print(n, end = " ")
-    scale(n-1)
+    reverse_scale(n-1)
 
 scale(n)
 print()
