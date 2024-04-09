@@ -1,11 +1,8 @@
 n = int(input())
-sum_v = 0
 
-def sum_add(n):
-    global sum_v
+def get_sum(n):
     if n == 0:
-        return
-    sum_v += n
-    sum_add(n-1)
-sum_add(n)
-print(sum_v)
+        return 0
+    return get_sum(n-1) + n
+
+print(get_sum(n))
