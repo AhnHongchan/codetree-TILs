@@ -1,7 +1,7 @@
 a, b, c = map(int, input().split())
 cnt = 0
 
-if (a == 11 and b == 11 and c <= 11) or (a == 11 and b <= 10):
+if (a == 11 and b == 11 and c < 11) or (a == 11 and b <= 10):
     print(-1)
 
 else:
