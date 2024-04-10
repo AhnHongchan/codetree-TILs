@@ -4,7 +4,7 @@ for _ in range(n):
     name, kor, eng, math = input().split()
     lst.append([name, kor, eng, math])
 
-lst.sort(key=lambda x:(x[1], x[2], x[3]))
+lst.sort(key=lambda x:(-int(x[1]), -int(x[2]), -int(x[3])))
 
 for i in range(n):
-    print(*lst[n-1-i])
+    print(*lst[i])
