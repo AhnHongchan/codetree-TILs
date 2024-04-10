@@ -17,5 +17,10 @@ while True:
         d1 = 0
         m1 += 1
 
+a = cnt % 7
 cnt //= 7
-print(cnt+1)
+
+if a == 0:
+    print(cnt)
+else:
+    print(cnt+1)
