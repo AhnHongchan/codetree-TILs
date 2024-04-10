@@ -2,6 +2,8 @@ m1, d1, m2, d2 = map(int, input().split())
 day = input()
 cnt = 0
 
+week = ['Mon', 'Tue', 'Wed', 'Tue', 'Fri', 'Sat', 'Sun']
+
 while True:
     if m1 == m2 and d1 == d2:
         break
@@ -17,10 +19,11 @@ while True:
         d1 = 0
         m1 += 1
 
-a = cnt % 7
+a = week.index(day)
+b = cnt % 7
 cnt //= 7
 
-if a == 0:
-    print(cnt)
-else:
+if a >= b:
     print(cnt+1)
+else:
+    print(cnt)
