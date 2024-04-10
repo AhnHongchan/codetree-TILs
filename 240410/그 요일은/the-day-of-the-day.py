@@ -23,7 +23,7 @@ a = week.index(day)
 b = cnt % 7
 cnt //= 7
 
-if a >= b:
+if b >= a:
     print(cnt+1)
 else:
     print(cnt)
