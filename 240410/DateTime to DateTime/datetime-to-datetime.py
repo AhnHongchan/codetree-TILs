@@ -2,16 +2,7 @@ a, b, c = map(int, input().split())
 cnt = 0
 
 if (a == 11 and b == 11 and c <= 11) or (a == 11 and b <= 10):
-    while True:
-        if a == 11 and b == 11 and c == 11:
-            print(cnt)
-            break
-        c += 1
-        cnt += 1
-        if c == 60:
-            c = 0
-            b += 1
-
+    print(-1)
 
 else:
     while True:
