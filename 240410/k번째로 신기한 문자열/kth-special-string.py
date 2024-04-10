@@ -4,7 +4,7 @@ k = int(k)
 lst = []
 for _ in range(n):
     a = input()
-    if t in a:
+    if t == a[0:len(t)]:
         lst.append(a)
 
 lst.sort()
