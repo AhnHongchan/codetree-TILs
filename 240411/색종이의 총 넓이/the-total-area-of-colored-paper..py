@@ -1,15 +1,16 @@
 n = int(input())
-arr = [[0] * 101 for _ in range(101)]
+ctr = 100
+arr = [[0] * (2*ctr+1) for _ in range(2*ctr+1)]
 
 for _ in range(n):
     x, y = map(int, input().split())
-    for i in range(x, x+8):
-        for j in range(y, y+8):
+    for i in range(ctr+x, ctr+x+8):
+        for j in range(ctr+y, ctr+y+8):
             arr[i][j] = 1
 
 cnt = 0
-for x in range(101):
-    for y in range(101):
+for x in range(2*ctr+1):
+    for y in range(2*ctr+1):
         if arr[x][y] == 1:
             cnt += 1
 
