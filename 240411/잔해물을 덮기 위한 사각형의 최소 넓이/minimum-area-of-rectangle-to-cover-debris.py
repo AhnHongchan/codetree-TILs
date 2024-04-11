@@ -17,9 +17,11 @@ max_x = 0
 max_y = 0
 
 # 1인 경우 x,y의 최대 좌표와  최소 좌표를 구해보자
+square = False
 for i in range(2*ctr+1):
     for j in range(2*ctr+1):
         if arr[i][j] == 1:
+            square = True
             max_x = max(max_x, i)
             max_y = max(max_y, j)
             min_x = min(min_x, i)
@@ -27,7 +29,7 @@ for i in range(2*ctr+1):
 
 area = 0
 
-if min_x == 2001 and min_y == 2001 and max_x == 0 and max_y == 0 :
+if not square :
     area = 0
 else :
     area = (max_x-min_x+1) * (max_y- min_y+1)
