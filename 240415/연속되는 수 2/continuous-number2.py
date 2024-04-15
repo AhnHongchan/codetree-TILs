@@ -1,4 +1,4 @@
-max_cnt = 0
+max_cnt = 1
 cnt = 1
 lst = []
 N = int(input())
