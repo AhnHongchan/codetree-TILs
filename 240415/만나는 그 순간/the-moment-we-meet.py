@@ -24,7 +24,8 @@ for _ in range(M):
 # print(arr_a)
 # print(arr_b)
 
-for i in range(1, len(arr_a)+1):
+n = min(len(arr_a), len(arr_b))
+for i in range(1, n+1):
     if arr_a[i] == arr_b[i]:
         print(i)
         break
