@@ -6,5 +6,6 @@ for i in range(len(arr)):
         cnt += 1
     else:
         cnt = 0
-    max(ans, cnt)
+    ans = max(ans, cnt)
+
 print(ans)
