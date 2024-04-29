@@ -1,7 +1,7 @@
 N, M = map(int, input().split())
 
-arr = [0] * 1001
-brr = [0] * 1001
+arr = [0] * 1000001
+brr = [0] * 1000001
 
 cnt = 0
 for i in range(N):
@@ -10,7 +10,7 @@ for i in range(N):
         cnt += 1
         arr[cnt] = arr[cnt-1]+v
     if i == N-1:
-        for k in range(cnt+1, 1001):
+        for k in range(cnt+1, 1000001):
             arr[k] = arr[k-1]
 
 cnt = 0
@@ -20,11 +20,11 @@ for i in range(M):
         cnt += 1
         brr[cnt] = brr[cnt-1]+v
     if i == M-1:
-        for k in range(cnt+1, 1001):
+        for k in range(cnt+1, 1000001):
             brr[k] = brr[k-1]
 
 ans = 1
-for i in range(2, 1001):
+for i in range(2, 1000001):
     if arr[i] == brr[i]:
         if arr[i-1] != brr[i-1]:
             ans += 1
