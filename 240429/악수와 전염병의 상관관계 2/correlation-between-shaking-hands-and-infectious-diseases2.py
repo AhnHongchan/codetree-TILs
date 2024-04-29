@@ -11,11 +11,11 @@ for i in range(T):
 arr.sort(key=lambda x : x[0])
 
 for i in range(len(arr)):
-    if people[arr[i][1]] == 1:
+    if people[arr[i][1]] == 1 and people[arr[i][2]] == 0:
         if shake[arr[i][1]] < K:
             people[arr[i][2]] = 1
 
-    if people[arr[i][2]] == 1:
+    if people[arr[i][2]] == 1 and people[arr[i][1]] == 0:
         if shake[arr[i][2]] < K:
             people[arr[i][1]] = 1
 
