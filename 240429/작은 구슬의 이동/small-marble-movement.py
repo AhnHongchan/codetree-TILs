@@ -14,9 +14,9 @@ while time < t:
         cnt = 0
     elif d == 'R':
         cnt = 2
-    elif d == 'N':
+    elif d == 'U':
         cnt = 1
-    else:  # d == 'S'
+    else:  # d == 'D'
         cnt = 3
 
     # 이동한 후의 좌표 계산
@@ -29,10 +29,10 @@ while time < t:
             d = 'R'
         elif d == 'R':
             d = 'L'
-        elif d == 'N':
-            d = 'S'
-        else:  # d == 'S'
-            d = 'N'
+        elif d == 'U':
+            d = 'D'
+        else:  # d == 'D'
+            d = 'U'
     else:  # 이동한 좌표가 범위 내에 있을 경우에만 좌표 갱신
         x = nx
         y = ny
