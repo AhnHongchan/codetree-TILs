@@ -23,8 +23,6 @@ for i in range(M):
         for k in range(cnt+1, 1001):
             brr[k] = brr[k-1]
 
-top = [0, 0]
-
 ans = 1
 for i in range(2, 1001):
     if arr[i] == brr[i]:
