@@ -10,7 +10,7 @@ d = 0
 while cnt < n * m:
     nx = x + dx[d]
     ny = y + dy[d]
-    if 0 <= nx < n and 0 <= ny < n and arr[nx][ny] == 0:
+    if 0 <= nx < n and 0 <= ny < m and arr[nx][ny] == 0:
         x = nx
         y = ny
         cnt += 1
