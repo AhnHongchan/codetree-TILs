@@ -23,6 +23,8 @@ for i in range(N):
             stop = True
             break
     if stop:
+        print(cnt)
         break
 
-print(cnt)
+    elif i == N-1 and not stop:
+        print(-1)
