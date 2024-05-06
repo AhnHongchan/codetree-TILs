@@ -11,11 +11,8 @@ for i in range(n-2):
             a, b, c = code[i], code[j], code[k]
             while a > 0 or b > 0 or c > 0:
                 if a % 10 + b % 10 + c % 10 < 10:
-                    if a > 0:
                         a //= 10
-                    if b > 0:
                         b //= 10
-                    if c > 0:
                         c //= 10
                 else:
                     carry = True
