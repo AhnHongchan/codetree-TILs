@@ -5,6 +5,8 @@ for i in range(n):
     if a[i] != 1:
         a[i] = 1
         break
+else:
+    a[n-1] = 0
 
 sum_v = 0
 
