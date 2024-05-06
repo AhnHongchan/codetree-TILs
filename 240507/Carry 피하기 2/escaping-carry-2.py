@@ -1,23 +1,23 @@
 n = int(input())
-code = []
-for i in range(n):
-    code.append(int(input()))
+n_list = []
+
+for _ in range(n):
+    n_list.append(int(input()))
 
 ans = -1
-for i in range(n-2):
-    for j in range(i+1, n-1):
-        for k in range(n):
-            carry = False
-            a, b, c = code[i], code[j], code[k]
-            while a > 0 or b > 0 or c > 0:
-                if a % 10 + b % 10 + c % 10 < 10:
-                        a //= 10
-                        b //= 10
-                        c //= 10
-                else:
-                    carry = True
-                    break
-            if not carry:
-                cnt = code[i] + code[j] + code[k]
-                ans = max(ans, cnt)
+
+def check(n1, n2, n3):
+    if (n1 % 10 + n2 % 10 + n3 % 10) > 9:
+        return False
+    if n1 == 0 and n2 == 0 and n3 == 0:
+        return True
+    return check(n1 // 10, n2 //10, n3 // 10)
+
+for i in range(n):
+    for j in range(i+1, n):
+        for k in range(j+1, n):
+            if check(n_list[i],n_list[j], n_list[k]):
+                total = n_list[i] + n_list[j] + n_list[k]
+                ans = max(ans, total)
+
 print(ans)
