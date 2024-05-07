@@ -79,3 +79,6 @@ if not result:  # 수직, 수평, 대각선 방향으로 오목이 없는 경우
                     break
         if result:
             break
+            
+if not result:  # 수직, 수평, 대각선 방향으로 오목이 없는 경우
+    print(0)
