@@ -6,7 +6,7 @@ for i in range(n-t):
     cnt = 0
     for j in range(t):
         x = h_list[i+j]
-        cnt += abs(x-3)
+        cnt += abs(x-h)
     if ans > cnt:
         ans = cnt
 
