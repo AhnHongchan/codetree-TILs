@@ -14,7 +14,9 @@ for i in range(n):
             continue
         if x < points[j][0] and y > points[j][1]:
             ans -= 1
+            pass
         elif x > points[j][0] and y < points[j][1]:
             ans -= 1
+            pass
             
 print(ans)
