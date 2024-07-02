@@ -1,3 +1,7 @@
+def triangle_area(x1, y1, x2, y2, x3, y3):
+    area = abs((x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3))
+    return area
+
 n = int(input())
 location = []
 
@@ -12,7 +16,7 @@ for i in range(n):
         x2, y2 = location[j]
         for k in range(j + 1, n):
             x3, y3 = location[k]
-            tri = abs((x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3))
-            ans = max(ans, tri)
+            sqr = triangle_area(x1, y1, x2, y2, x3, y3)
+            ans = max(ans, sqr)
 
 print(ans)
