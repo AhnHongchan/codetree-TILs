@@ -1,22 +1,27 @@
-def triangle_area(x1, y1, x2, y2, x3, y3):
-    area = abs((x1 * y2 + x2 * y3 + x3 * y1) - (x2 * y1 + x3 * y2 + x1 * y3))
-    return area
+def max_rectangle_area(n, points):
+    max_area = 0
+    
+    for i in range(n):
+        x1, y1 = points[i]
+        for j in range(i + 1, n):
+            x2, y2 = points[j]
+            if x1 == x2 or y1 == y2:
+                continue
+            for k in range(n):
+                x3, y3 = points[k]
+                if x3 == x1 and y3 == y2:
+                    area = abs((x2 - x1) * (y2 - y1))
+                    max_area = max(max_area, area)
+                elif x3 == x2 and y3 == y1:
+                    area = abs((x2 - x1) * (y2 - y1))
+                    max_area = max(max_area, area)
+    
+    return max_area
 
-n = int(input())
-location = []
+# 입력 받기
+n = int(input().strip())
+points = [tuple(map(int, input().strip().split())) for _ in range(n)]
 
-for _ in range(n):
-    x, y = map(int, input().split())
-    location.append((x, y))
-
-ans = 0
-for i in range(n):
-    x1, y1 = location[i]
-    for j in range(i + 1, n):
-        x2, y2 = location[j]
-        for k in range(j + 1, n):
-            x3, y3 = location[k]
-            sqr = triangle_area(x1, y1, x2, y2, x3, y3)
-            ans = max(ans, sqr)
-
-print(ans)
+# 최대 넓이의 두 배 출력
+result = max_rectangle_area(n, points)
+print(result)
