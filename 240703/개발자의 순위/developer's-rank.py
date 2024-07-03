@@ -14,7 +14,7 @@ for x in numbers:
                 if leaderboard[i].index(x) < leaderboard[i].index(y):
                     cnt += 1
 
-        if cnt == 3:
+        if cnt == k:
             ans += 1
 
 print(ans)
