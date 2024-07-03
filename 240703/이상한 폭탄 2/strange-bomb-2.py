@@ -5,8 +5,12 @@ fire = []
 
 for i in range(n-3):
     bomb = bombs[i]
-    for j in range(i+1, i+4):
+    for j in range(i+1, i+k+1):
         if bomb == bombs[j]:
             fire.append(bomb)
 
-print(max(fire))
+
+if len(fire) == 0:
+    print(-1)
+else:
+    print(max(fire))
