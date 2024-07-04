@@ -3,7 +3,6 @@ ice = [6, 4, 5, 2, 7, 1, 8]
 water_level = 5
 
 submerged = [height > water_level for height in ice]
-print(submerged)  # Output: [True, False, False, False, True, False, True]
 
 def count_ice_chunks(ice, water_level):
     submerged = [height > water_level for height in ice]
