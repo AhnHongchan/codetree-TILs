@@ -1,47 +1,31 @@
-from collections import Counter
+def count_team_wins(board):
+    # 모든 가능한 줄을 저장
+    lines = [
+        # 가로줄
+        board[0],
+        board[1],
+        board[2],
+        # 세로줄
+        board[0][0] + board[1][0] + board[2][0],
+        board[0][1] + board[1][1] + board[2][1],
+        board[0][2] + board[1][2] + board[2][2],
+        # 대각선
+        board[0][0] + board[1][1] + board[2][2],
+        board[0][2] + board[1][1] + board[2][0]
+    ]
 
-teams = [input() for _ in range(3)]
-ans = 0
+    team_win_count = 0
 
-# 1. 같은 행에 숫자 2개 있는 지 확인
+    # 모든 줄을 확인하여 팀 승리 가능한 줄의 수를 계산
+    for line in lines:
+        unique_numbers = set(line)
+        if len(unique_numbers) == 2:
+            team_win_count += 1
 
-for i in range(3):
-    freq = {}
-    digits = teams[i]
-    for digit in digits:
-        if digit in freq:
-            freq[digit] += 1
-        else:
-            freq[digit] = 1
-    for cnt in freq.values():
-        if cnt == 2:
-            ans += 1
+    return team_win_count
 
-# 2. 같은 열에 숫자 2개 있는 지 여부 확인하기
+# 입력 받기
+board = [input().strip() for _ in range(3)]
 
-for j in range(3):
-    case = []
-    for i in range(3):
-        a = teams[i][j]
-        case.append(a)
-    count = Counter(case)
-
-    for cnt in count.values():
-        if cnt == 2:
-            ans += 1
-    
-# 3. 양쪽 대각선 재기
-
-case2 = [teams[0][0], teams[1][1], teams[2][2]]
-count2 = Counter(case2)
-for cnt in count2.values():
-    if cnt == 2:
-        ans += 1
-
-case3 = [teams[2][0], teams[1][1], teams[0][2]]
-count3 = Counter(case3)
-for cnt in count3.values():
-    if cnt == 2:
-        ans += 1
-
-print(ans)
+# 결과 출력
+print(count_team_wins(board))
