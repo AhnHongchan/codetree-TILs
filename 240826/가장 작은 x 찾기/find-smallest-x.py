@@ -9,7 +9,7 @@ while True:
     y = x
     for j in range(n):
         y *= 2
-        if range_list[j][0] < y < range_list[j][1]:
+        if range_list[j][0] <= y <= range_list[j][1]:
             pass
         else:
             x += 1
