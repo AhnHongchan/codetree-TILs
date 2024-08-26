@@ -14,7 +14,7 @@ while True:
         else:
             x += 1
             break
-    if y == x * 16:
+    if y == x * (2 ** n):
         break
 
 print(x)
