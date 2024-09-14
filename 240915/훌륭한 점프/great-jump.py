@@ -7,11 +7,8 @@ def min_max_value_on_path(n, k, arr):
     for i in range(1, n):
         # i번 돌에 도달하기 위한 이전 돌 j의 가능한 범위 (i-k 부터 i-1 까지)
         for j in range(max(0, i - k), i):
-            print('dpj', j)
-            print(dp[j])
             dp[i] = min(dp[i], max(dp[j], arr[i]))
-            print('dpi', i)
-            print(dp[i])
+
     # 결과값 출력
     return dp[-1]
 
